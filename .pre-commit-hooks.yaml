@@ -1,0 +1,48 @@
+- id: install-commit-msg
+  name: install-commit-msg
+  entry: install-commit-msg
+  verbose: true
+  language: python
+  pass_filenames: false
+  stages: [manual]
+- id: check-release-notes
+  name: check-release-notes
+  entry: check-release-notes
+  verbose: true
+  language: python
+  pass_filenames: true
+- id: tox-black
+  name: tox-black
+  entry: tox -e black
+  always_run: true
+  verbose: true
+  pass_filenames: false
+  language: system
+- id: tox-cover
+  name: tox-cover
+  entry: tox -e cover
+  always_run: true
+  verbose: true
+  pass_filenames: false
+  language: system
+- id: tox-flake8
+  name: tox-flake8
+  entry: tox -e flake8
+  always_run: true
+  verbose: true
+  pass_filenames: false
+  language: system
+- id: tox-pylint
+  name: tox-pylint
+  entry: tox -e pylint
+  always_run: true
+  verbose: true
+  pass_filenames: false
+  language: system
+- id: tox-safety
+  name: tox-safety
+  entry: tox -e safety
+  always_run: true
+  verbose: true
+  pass_filenames: false
+  language: system

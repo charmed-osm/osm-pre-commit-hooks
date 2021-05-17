@@ -30,15 +30,20 @@ Manual hook to install commit-msg.
   - Should be run on the first time that the repository is cloned.
   - `--commit-msg-url` - URL to the commit-msg script.
 
-#### `check-builtin-literals`
-Require literal syntax when initializing empty or zero Python builtin types.
-  - Allows calling constructors with positional arguments (e.g., `list('abc')`).
-  - Allows calling constructors from the `builtins` (`__builtin__`) namespace (`builtins.list()`).
-  - Ignore this requirement for specific builtin types with `--ignore=type1,type2,…`.
-  - Forbid `dict` keyword syntax with `--no-allow-dict-kwargs`.
+#### `tox-black`
+Run tox -e black.
 
-#### `check-case-conflict`
-Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT.
+#### `tox-cover`
+Run tox -e black.
+
+#### `tox-flake8`
+Run tox -e flake8.
+
+#### `tox-pylint`
+Run tox -e pylint.
+
+#### `tox-safety`
+Run tox -e safety.
 
 ### As a standalone package
 
