@@ -1,0 +1,12 @@
+*.egg-info
+*.py[co]
+.*.sw[a-z]
+.coverage
+.tox
+.venv.touch
+.vscode
+/.mypy_cache
+/.pytest_cache
+/venv*
+coverage-html
+dist
